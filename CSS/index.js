@@ -1,28 +1,42 @@
-index.js
+// Footer copyright
 const today = new Date();
 const thisYear = today.getFullYear();
-const footer = document.querySelector('footer');
-const copyright = document.createElement('p');
+const footer = document.querySelector("footer");
+
+const copyright = document.createElement("p");
 copyright.innerHTML = `\u00A9 Your Name ${thisYear}`;
-<section> <h2>Leave a Message</h2>
-  <form id="leave_message">
-    <label> Username:
-      <input type="text" name="username" required> </label>
-<label>Email:
-      <input type="email" name="usersEmail" required>
-    </label>
-<label>Message:<textarea name="message" required></textarea>
-    </label>
-<button type="submit">Leave Message </button>
-</form>
-</section>
 footer.appendChild(copyright);
-<section>
-    </section>const messageSection
-messageSection
-const newMessage
-<a></a>
-const removeButton
-<ul>
-    
-</ul>
+
+// Message form logic
+const messageForm = document.getElementById("leave_message");
+const messageSection = document.getElementById("messages");
+const messageList = document.getElementById("messageList");
+
+messageForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const username = event.target.username.value;
+  const usersEmail = event.target.usersEmail.value;
+  const message = event.target.message.value;
+
+  // Create new list item
+  const newMessage = document.createElement("li");
+
+  newMessage.innerHTML = `
+    <a href="mailto:${usersEmail}">${username}</a>:
+    <span> ${message} </span>
+  `;
+
+  // Remove button
+  const removeButton = document.createElement("button");
+  removeButton.textContent = "Remove";
+
+  removeButton.addEventListener("click", function () {
+    newMessage.remove();
+  });
+
+  newMessage.appendChild(removeButton);
+  messageList.appendChild(newMessage);
+
+  messageForm.reset();
+});
