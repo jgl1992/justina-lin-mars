@@ -1,56 +1,6 @@
-const today = new Date();
-const thisYear = today.getFullYear();
-const footer = document.querySelector('footer');
-const copyright = document.createElement('p');
-copyright.innerHTML = `\u00A9 Your Name ${thisYear}`;
-<section> <h2>Leave a Message</h2>
-<form id="leave_message">
-<label> Username:
-<input type="text" name="username" required> </label>
-<label>Email:
-<input type="email" name="usersEmail" required>
-</label> <label>Message:<textarea name="message" required></textarea>
-</label>
-<button type="submit">Leave Message </button>
-</form>
-</section>
-footer.appendChild(copyright);
-<section> </section>const messageSection
-messageSection
-const newMessage
-<a></a>
-const removeButton
-<ul>
-</ul>
-const messageForm
-const messageForm = document.messageForm('username');
- btn.addEventListener("click", function (event) {
-    out.textContent = "Message form submitted!
-    // create three new variables and retrieve the value
-    const first name
-    const messageForm = document.messageForm('firstName');
-    const last name
-    const messageForm = document.messageForm('lastName');
-    const email
-    const messageForm = document.messageForm('email');
-    console.log(elementsByName[0]); 
-   // Create a variable named messageSection and use "DOM Selection" to select the #messages section by id
-   var messageSection
-   const messageSection = document.getElementById('messageSection');
-  // Create a variable named messageList and use "DOM Selection" to query the messageSection (instead of the entire document) to find the <ul> element
- const messageList
- const messageList = document.getElementById('messageList');
- //Create a variable named newMessage that makes a new list item (li) element
- var newMessage
- <a></a>
- <a href="mailto:usersEmail">usersName</a>
-var removeButton
- ]
- const messageForm = document.forms.leave_message;
-
-messageForm.addEventListener("submit", function(event) {
-event.preventDefault(); // Stop page refresh
-
+index.js
+#lesson-13
+ 
     // Get form values
     const name = event.target.usersName.value;
     const email = event.target.usersEmail.value;
